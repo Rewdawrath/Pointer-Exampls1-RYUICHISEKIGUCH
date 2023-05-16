@@ -1,4 +1,4 @@
-#define SIZE 10
+#define SIZE 100
 #include <iostream>
 #include <iomanip>
 #include <string.h>
