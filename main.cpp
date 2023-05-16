@@ -6,20 +6,21 @@ using namespace std;
 
 int main(){
 
-  int *pa, *pb, i, temp;
-  int a[SIZE] = { 1, 2, 3, 4, 5, 6, 7, 8, 9,
-  10 };
+  char *pa, *pb, i, temp;
+  char a[SIZE];
+  cout<<"Input string";
+  cin>>a;
   pa = &a[0];
   cout<< "Original: ";
-  for (i = 0; i < SIZE - 1; i++,pa++){
+  for (i = 0; i < strlen(a) - 1; i++,pa++){
     cout<<setw(3)<<*pa;
   }
   cout<<setw(3)<<*pa<<endl;
 
   pa = &a[0];
-  pb = &a[SIZE - 1];
+  pb = &a[strlen(a) - 1];
   cout<<"Reverse: ";
-  for (i = 0; i < SIZE / 2; i++) {
+  for (i = 0; i < strlen(a) / 2; i++) {
     temp = *pa;
     *pa = *pb;
     *pb = temp;
@@ -27,11 +28,11 @@ int main(){
     pb--;
   }
   pa = &a[0];
-  for (i = 0; i < SIZE - 1; i++,pa++){
-    cout<<*pa<<" ";
+  for (i = 0; i < strlen(a) - 1; i++,pa++){
+    cout<<setw(3)<<*pa;
     
   }
-  cout<<*pa<<endl;
+  cout<<setw(3)<<*pa<<endl;
   return 0;
 }
 
